@@ -131,6 +131,10 @@
               </div>
               <div class="cat-cap" id="profile-info">
                 <h1>Nombre y Apellido</h1>
+                <div class="plan">
+                <h2><i class="fas fa-calendar-check"></i> Plan: Premium</h2>
+                <p> Inico: 00/00/000 </br> Fin: 00/00/0000</p>
+              </div>
                 <h3><i class="fas fa-envelope"></i> Email@gmail.com</h3>
                 <h3><i class="fas fa-map-marker-alt"></i> Victoria, Entre Rios, Argentina</h3>
                 <h3><i class="fas fa-birthday-cake"></i> 00/00/0000</h3>
@@ -140,8 +144,9 @@
                 <p><i class="fas fa-microphone"></i> Edad de la Voz: Adulto</p>
                 <p><i class="fas fa-info-circle"></i> Descripción: Locutor profesional con más de 10 años de experiencia.</p>
                 <p><i class="fas fa-credit-card"></i> Medio de Pago: Paypal</p>
-                <p><i class="fas fa-calendar-check"></i> Plan: Premium</p>
-                <p> Inico: 00/00/000 </br> Fin: 00/00/0000</p></br>
+                <!-- <p><i class="fas fa-calendar-check"></i> Plan: Premium</p> -->
+                
+              
                 <h3><i class="fas fa-headphones"></i> Demos</h3>
 <ul>
     <li><audio controls><source src="demo1.mp3" type="audio/mpeg">Tu navegador no soporta el elemento de audio.</audio></li>
@@ -149,7 +154,9 @@
     <li><audio controls><source src="demo3.mp3" type="audio/mpeg">Tu navegador no soporta el elemento de audio.</audio></li>
 </ul>
                 <a href="#" class="genric-btn primary-border circle" onclick="editProfile()">Editar</a>
-            </div>
+                <a href="#" class="genric-btn primary-border circle" onclick="subirDemo()">Subir Demo</a>
+
+              </div>
             
             
             
@@ -279,11 +286,6 @@ onfocus="(this.type='date')" onblur="if (this.value=='') {this.type='text'}" req
                       }
                   }
               </script>
-              
-                <div class="mt-10" style="text-align: left;margin-left: 20px;">
-                  <p>Subir demos:</p>
-                  <input type="file" id="audio-upload" name="audio-upload" accept="audio/*">
-              </div>
                 <div class="mt-10">
                   <textarea id="mytextarea"
                       type="text"
@@ -312,7 +314,25 @@ onfocus="(this.type='date')" onblur="if (this.value=='') {this.type='text'}" req
             document.getElementById('edit-form').style.display = 'block';
           }
           </script>
-          
+<div id="subirDemo" style="display: none;">
+  <form>
+      <div class="mt-10" style="text-align: left;margin-left: 20px;">
+          <p>Subir demos:</p>
+          <input type="file" id="audio-upload" name="audio-upload" accept="audio/*">
+      </div></br>
+      <div style="text-align: center;">
+          <a href="#" class="genric-btn primary-border circle">Guardar</a>
+      </div>
+  </form>
+</div>
+<script>
+  function subirDemo() {
+      document.getElementById('profile-info').style.display = 'none';
+      document.getElementById('subirDemo').style.display = 'block';
+  }
+</script>
+
+    
         <!-- <div class="single-cat text-center">
               <div class="cat-icon">
                 <img src="assets/img/gallery/team3.png" alt="" />
