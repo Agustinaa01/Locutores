@@ -1,4 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap");
+
+#message-container, #success-message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#message-container {
+    background-color: #F3F3F7;
+    color: #6060A3;
+    border: 1px solid #f5c6cb;
+}
+
+
+#success-message {
+    background-color:  #F3F3F7;
+    color: #6060A3;
+    border: 1px solid #c3e6cb;
+}
+#demo-success-message {
+    display: none;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #F3F3F7;
+    color: #6060A3;
+    border: 1px solid #c3e6cb;
+}
+#loading {
+    display: none;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #F3F3F7;
+    color: #6060A3;
+    border: 1px solid #c3e6cb;
+}
+#mensaje {
+    display: none;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #F3F3F7;
+    color: #6060A3;
+    border: 1px solid #c3e6cb;
+}
+#error-message {
+    display: none;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #F3F3F7;
+    color: #6060A3;
+    border: 1px solid #c3e6cb;
+}
+
 .white-bg {
   background: #ffffff;
 }
@@ -2251,18 +2312,7 @@ hr {
     margin: 0 8px;
   }
 }
-.main-header .main-menu ul li a {
-  color: #fff;
-  font-weight: 600;
-  padding: 39px 2px;
-  display: block;
-  font-size: 16px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  text-transform: capitalize;
-}
+
 .main-header .main-menu ul li:hover > a {
   color: #fff;
 }
@@ -3804,18 +3854,35 @@ hr {
 
 .login-form .form-input input[type="text"],
 .login-form .form-input input[type="email"],
-.login-form .form-input input[type="password"],
-.login-form .form-input select {
+.login-form .form-input input[type="password"] {
     outline: none;
     height: 40px;
-    /* padding: 10px; */
+    padding: 10px;
     box-sizing: border-box;
     width: 100%;
     /* border: 1px solid rgba(255, 255, 255, 0.5); */
     background: transparent;
     font-size: 18px;
     border: none;
-    color: #fff;
+    background: #fff;
+    border-radius: 10px;
+    color: #000;
+    border-bottom: 1px solid #fff;
+}
+
+.login-form .form-input select {
+    outline: none;
+    height: 40px;
+    padding: 0 0 0 5px;
+    box-sizing: border-box;
+    width: 100%;
+    /* border: 1px solid rgba(255, 255, 255, 0.5); */
+    background: transparent;
+    font-size: 18px;
+    border: none;
+    background: #fff;
+    border-radius: 10px;
+    color: #000;
     border-bottom: 1px solid #fff;
 }
 
@@ -5327,6 +5394,7 @@ del {
   color: #1f2b7b;
   border: 1px solid #1f2b7b;
   background: #fff;
+  margin-left: 20px;
 }
 .genric-btn.primary-border:hover {
   color: #fff;
@@ -5593,12 +5661,26 @@ del {
 .single-input {
   display: block;
   width: 100%;
-  line-height: 40px;
+  line-height: 30px;
   border: none;
   outline: none;
   background: #f9f9ff;
   padding: 0 20px;
 }
+.form-label{
+  font-size: 10px;
+  padding: 0 20px;
+}
+
+.form-title{
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+.form-audio{
+  padding: 0 20px;
+}
+
 .single-input:focus {
   outline: none;
 }

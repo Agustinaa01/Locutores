@@ -40,23 +40,30 @@
     <!-- Preloader Start-->
 
 
-    <main class="login-body" data-vide-bg="assets/img/login-bg.mp4">
-        <!-- Login Admin -->
-        <form class="form-default" action="/locutores/index.html" method="POST">
-            
+    <main class="login-body" data-vide-bg="assets/img/login.mp4">
+
+        <form role="form" id="Formulario">
+
             <div class="login-form">
                 <h2>Iniciar Sesión</h2>
+                                <div id="message-container" style="display: none;" class="      form-message-container">
+            </div>
+
+            <div id="success-message" style="display: none;" class="form-success-message">
+                ¡Inicio de sesion exitoso! Serás redirigido en unos segundos...
+            </div>
                 <div class="form-input">
                     <label for="name">Email</label>
-                    <input  type="email" name="email">
+                    <input  type="email" id="email" name="email">
                 </div>
                 <div class="form-input">
                     <label for="name">Contraseña</label>
-                    <input type="password" name="password">
+                    <input type="password" id="password" name="password">
                 </div>
-                <div class="form-input pt-30">
-                    <input type="submit" name="submit" value="login">
-                </div>
+                <div class="text-center">
+                      <button type="button" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0"
+                        id="loginButton" onclick="login()">Iniciar Sesión</button>
+                    </div>
                 
                 <!-- Forget Password -->
                 <a href="#" class="registration">¿Olvidaste tu contaseña?</a>
@@ -113,5 +120,7 @@
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
     
+    <script src="./assets/js/login.js"></script>
+
     </body>
 </html>
